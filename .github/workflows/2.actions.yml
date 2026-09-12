@@ -22,10 +22,10 @@ jobs:
               with:
                  context: .
                  push: true
-                 tags: yoitsmeaditya/flask-app-gha:v1.0.1
+                 tags: yoitsmeaditya/flask-app-gha:v1.0.2
             
             - name: docker run container
-              run: docker container run -d -p 5000:5000 --name ar-flask-app ar-flask-app:v1.0.0
+              run: docker container run -d -p 5000:5000 --name yoitsmeaditya/flask-app-gha:v1.0.2
             
             - name: smoke test
               run: |
