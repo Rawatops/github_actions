@@ -1,4 +1,4 @@
-name: ar-flask-app-workflow
+name: ar-flask-app-workflow-final
 on: push
 jobs:
     flask-ci-job:
@@ -12,7 +12,7 @@ jobs:
               run:  docker build -t ar-flask-app:v1.0.0 .
             
             - name: docker run container
-              run: docker container run -p 5000:5000 --name ar-flask-app ar-flask-app:v1.0.0
+              run: docker container run -d -p 5000:5000 --name ar-flask-app ar-flask-app:v1.0.0
             
             - name: smoke test
               run: |
